@@ -551,6 +551,18 @@
         "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
         "timestamp": 1790523824650
       }
+    ],
+    "17. 最終チェックポイント - 型検査・リント・全テストを通す": [
+      {
+        "executionId": "c1c3ccb1-fab8-4241-94a9-82992b2a3934",
+        "chatSessionId": "sess_20d30ac3-c6dd-438e-b43b-3cf900cc4469",
+        "timestamp": 1790524010943
+      },
+      {
+        "executionId": "c1c3ccb1-fab8-4241-94a9-82992b2a3934",
+        "chatSessionId": "sess_20d30ac3-c6dd-438e-b43b-3cf900cc4469",
+        "timestamp": 1790524085026
+      }
     ]
   }
 }
