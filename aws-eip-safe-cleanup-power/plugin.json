@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aws-eip-safe-cleanup",
+  "version": "1.0.0",
+  "description": "未使用の AWS Elastic IP（EIP）を安全に検出・解放するための知識とワークフローを提供する Power。課金の仕組み、未使用の判定基準、事前確認、安全な解放手順、誤削除を防ぐガードレールをまとめる。",
+  "author": {
+    "name": "kiro-university-challenge"
+  },
+  "keywords": [
+    "elastic ip",
+    "eip",
+    "未使用 eip",
+    "eip 削除",
+    "eip 解放",
+    "release-address",
+    "allocation id",
+    "association id",
+    "public ipv4",
+    "aws コスト削減",
+    "idle ip",
+    "unassociated eip",
+    "aws-eip-cleaner"
+  ],
+  "homepage": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html",
+  "license": "MIT"
+}
