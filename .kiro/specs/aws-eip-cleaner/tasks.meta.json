@@ -415,6 +415,61 @@
         "chatSessionId": "sess_53d06c90-1411-4a46-bc3c-943e75ef8150",
         "timestamp": 1790522361088
       }
+    ],
+    "14.1 `scan_region` を実装する（`scanner.py`）": [
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522770165
+      },
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522866657
+      }
+    ],
+    "14.3 `release_eip` を実装する（`release.py`）": [
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522771255
+      },
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522867745
+      }
+    ],
+    "14.2 `scan_region` の moto モック・例外ユニットテストを書く": [
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522872654
+      },
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522994408
+      }
+    ],
+    "14.4 `release_eip` の moto モック・ログユニットテストを書く": [
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522873994
+      },
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522995289
+      }
+    ],
+    "14. EIP 列挙・解放（I/O 層）": [
+      {
+        "executionId": "cf3faef1-2a25-46d0-9a8b-37638219434b",
+        "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
+        "timestamp": 1790522995372
+      }
     ]
   }
 }

@@ -189,20 +189,20 @@
     - 全リージョン取得（2.2）と取得失敗時の `RegionListingError`・非ゼロ終了（2.5）を検証する
     - _Requirements: 2.2, 2.5_
 
-- [ ] 14. EIP 列挙・解放（I/O 層）
-  - [ ] 14.1 `scan_region` を実装する（`scanner.py`）
+- [x] 14. EIP 列挙・解放（I/O 層）
+  - [x] 14.1 `scan_region` を実装する（`scanner.py`）
     - `describe_addresses` で全件列挙し `extract_unused_eips` に渡す。API `ClientError` は捕捉して `RegionScanResult(error=...)` に変換し、部分取得結果を破棄する
     - _Requirements: 5.1, 5.5_
 
-  - [ ]* 14.2 `scan_region` の moto モック・例外ユニットテストを書く
+  - [x] 14.2 `scan_region` の moto モック・例外ユニットテストを書く
     - moto で EIP を割り当て全件列挙（5.1）、API 例外時に失敗扱いで部分結果を記録しないこと（5.5）を検証する
     - _Requirements: 5.1, 5.5_
 
-  - [ ] 14.3 `release_eip` を実装する（`release.py`）
+  - [x] 14.3 `release_eip` を実装する（`release.py`）
     - `Allocation_ID` を用いて `release_address` を実行する。リトライ可能エラーは botocore 標準リトライに委譲。失敗時 `EipReleaseError` に変換。成功は INFO ログ（Allocation_ID）
     - _Requirements: 10.1, 10.2, 10.4, 10.5_
 
-  - [ ]* 14.4 `release_eip` の moto モック・ログユニットテストを書く
+  - [x] 14.4 `release_eip` の moto モック・ログユニットテストを書く
     - moto で Allocation_ID 指定の解放（10.1）、リトライ不能エラーで 1 回失敗確定（10.5）、`caplog` で INFO/ERROR に Allocation_ID が含まれること（10.2, 10.3）を検証する
     - _Requirements: 10.1, 10.2, 10.3, 10.5_
 

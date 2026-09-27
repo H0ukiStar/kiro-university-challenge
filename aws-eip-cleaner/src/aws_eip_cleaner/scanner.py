@@ -1,14 +1,21 @@
-"""aws-eip-cleaner の未利用 EIP 抽出を提供するモジュール。
+"""aws-eip-cleaner の未利用 EIP 抽出とリージョン調査を提供するモジュール。
 
 本モジュールの ``extract_unused_eips`` は AWS API に依存しない純粋ロジック層の関数で
 あり、``describe_addresses`` 相当のアドレス集合から、いずれのリソースにも関連付けられて
 いない（Association_ID を持たない）EIP を ``UnusedEip`` として抽出する。
-AWS API を介したリージョン単位の調査といった I/O を伴う処理は別途 I/O 層で提供する。
+``scan_region`` は AWS API を介して単一リージョンを調査する I/O 層の関数であり、
+純粋ロジック層の ``extract_unused_eips`` を利用しつつ、API 失敗を失敗結果へ隔離する。
 """
 
+import logging
+
+from botocore.exceptions import ClientError
+from mypy_boto3_ec2.client import EC2Client
 from mypy_boto3_ec2.type_defs import AddressTypeDef
 
-from aws_eip_cleaner.models import UnusedEip
+from aws_eip_cleaner.models import RegionScanResult, UnusedEip
+
+logger = logging.getLogger(__name__)
 
 
 def extract_unused_eips(
@@ -48,3 +55,42 @@ def extract_unused_eips(
             )
         )
     return unused
+
+
+def scan_region(client: EC2Client, region: str) -> RegionScanResult:
+    """単一リージョンを調査し、未利用 EIP を列挙する。
+
+    ``describe_addresses`` で当該リージョンのアドレスを全件取得し、
+    ``extract_unused_eips`` で未利用 EIP を抽出して成功結果を返す。
+    API 呼び出しが失敗した場合は例外を捕捉し、それまでに部分取得した結果は
+    破棄したうえで、エラー内容を保持した失敗結果を返す。失敗を結果値として
+    表現することで、呼び出し側（並列調査）が 1 リージョンの失敗を他リージョンへ
+    波及させずに継続できる。
+
+    Parameters
+    ----------
+    client : EC2Client
+        調査対象リージョンに紐づく EC2 クライアント。
+    region : str
+        調査対象リージョン。
+
+    Returns
+    -------
+    RegionScanResult
+        成功時は抽出した未利用 EIP を保持し、失敗時は ``error`` に
+        エラー内容を保持した調査結果。
+    """
+    try:
+        response = client.describe_addresses()
+    except ClientError as exc:
+        logger.warning("リージョンの調査に失敗しました（region=%s）: %s", region, exc)
+        return RegionScanResult(region=region, unused_eips=[], error=str(exc))
+
+    addresses: list[AddressTypeDef] = list(response.get("Addresses", []))
+    unused_eips = extract_unused_eips(addresses, region)
+    logger.debug(
+        "リージョンの調査が完了しました（region=%s, 未利用 EIP=%d 件）",
+        region,
+        len(unused_eips),
+    )
+    return RegionScanResult(region=region, unused_eips=unused_eips)
