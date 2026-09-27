@@ -16,13 +16,13 @@
   - `python -m aws_eip_cleaner` 用に `src/aws_eip_cleaner/__main__.py` の骨組み（`from aws_eip_cleaner.cli import main` を呼び出し `raise SystemExit(main())`）を作成する
   - _Requirements: 1.1_
 
-- [ ] 2. 例外階層とデータモデル
-  - [ ] 2.1 例外階層を実装する（`errors.py`）
+- [x] 2. 例外階層とデータモデル
+  - [x] 2.1 例外階層を実装する（`errors.py`）
     - `AwsEipCleanerError` を基底に、`OptionConflictError`, `TooManyRegionsError(ValueError)`, `InvalidRegionError(ValueError)`, `RegionListingError(RuntimeError)`, `ProfileNotFoundError`, `CredentialResolutionError`, `RegionScanError(RuntimeError)`, `EipReleaseError(RuntimeError)` を定義する
     - 各例外に日本語 numpy スタイル docstring を付す
     - _Requirements: 2.3, 2.4, 3.3, 3.4, 5.5, 9.5, 10.3_
 
-  - [ ] 2.2 データモデルを実装する（`models.py`）
+  - [x] 2.2 データモデルを実装する（`models.py`）
     - `UnusedEip`（frozen dataclass: `allocation_id`, `public_ip`, `region`, `association_id: str | None = None`）を定義する
     - `RegionScanResult`（`region`, `unused_eips`, `error: str | None`, `succeeded` プロパティ）を定義する
     - `AggregatedResult`（`unused_eips`, `succeeded_regions`, `failed_regions: dict[str, str]`, `has_scan_failure` プロパティ）を定義する

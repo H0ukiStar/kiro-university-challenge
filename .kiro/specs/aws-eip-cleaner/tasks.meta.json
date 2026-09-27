@@ -12,6 +12,37 @@
         "chatSessionId": "sess_a59d6ba1-c77b-4b7b-a9f4-9cc7a4b7287f",
         "timestamp": 1790495425395
       }
+    ],
+    "2.1 例外階層を実装する（`errors.py`）": [
+      {
+        "executionId": "6113bda3-124e-4498-a5eb-19870e593d25",
+        "chatSessionId": "sess_cac85c19-195f-438e-829f-da51f8167fc7",
+        "timestamp": 1790503081390
+      },
+      {
+        "executionId": "6113bda3-124e-4498-a5eb-19870e593d25",
+        "chatSessionId": "sess_cac85c19-195f-438e-829f-da51f8167fc7",
+        "timestamp": 1790503177383
+      }
+    ],
+    "2.2 データモデルを実装する（`models.py`）": [
+      {
+        "executionId": "6113bda3-124e-4498-a5eb-19870e593d25",
+        "chatSessionId": "sess_cac85c19-195f-438e-829f-da51f8167fc7",
+        "timestamp": 1790503082275
+      },
+      {
+        "executionId": "6113bda3-124e-4498-a5eb-19870e593d25",
+        "chatSessionId": "sess_cac85c19-195f-438e-829f-da51f8167fc7",
+        "timestamp": 1790503179559
+      }
+    ],
+    "2. 例外階層とデータモデル": [
+      {
+        "executionId": "6113bda3-124e-4498-a5eb-19870e593d25",
+        "chatSessionId": "sess_cac85c19-195f-438e-829f-da51f8167fc7",
+        "timestamp": 1790503179660
+      }
     ]
   }
 }
