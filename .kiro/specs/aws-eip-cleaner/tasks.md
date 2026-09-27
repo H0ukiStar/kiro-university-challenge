@@ -165,17 +165,17 @@
 - [x] 11. チェックポイント - オーケストレーションのテストを通す
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 12. 認証解決（I/O 層）
-  - [ ] 12.1 `resolve_session` / `create_ec2_client` を実装する（`credentials.py`）
+- [x] 12. 認証解決（I/O 層）
+  - [x] 12.1 `resolve_session` / `create_ec2_client` を実装する（`credentials.py`）
     - `resolve_session`: `profile is None` なら標準チェーン、指定時はそのプロファイル。`ProfileNotFound` → `ProfileNotFoundError`、`NoCredentialsError`/認証系 `ClientError` → `CredentialResolutionError` に変換する
     - `create_ec2_client`: 指定リージョンの型付き `EC2Client` を生成し、`Config(retries={"max_attempts": 3, "mode": "standard"})` を適用する
     - _Requirements: 3.1, 3.2, 3.5, 10.4_
 
-  - [ ]* 12.2 認証成功の moto モック統合テストを書く
+  - [x] 12.2 認証成功の moto モック統合テストを書く
     - profile 有無で Session 生成引数が切り替わり、クライアント生成が成功することを検証する
     - _Requirements: 3.1, 3.2, 3.5_
 
-  - [ ]* 12.3 認証失敗・リトライ設定のユニットテストを書く
+  - [x] 12.3 認証失敗・リトライ設定のユニットテストを書く
     - プロファイル不在で `ProfileNotFoundError`、認証失敗で `CredentialResolutionError`（3.3, 3.4）、生成 Config の `retries` が `{"max_attempts": 3, "mode": "standard"}`（10.4）を検証する
     - _Requirements: 3.3, 3.4, 10.4_
 

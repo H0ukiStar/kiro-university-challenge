@@ -360,6 +360,49 @@
         "chatSessionId": "sess_24164dc3-9303-461a-82b2-51b80d9e75ee",
         "timestamp": 1790520377074
       }
+    ],
+    "12.1 `resolve_session` / `create_ec2_client` を実装する（`credentials.py`）": [
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520492973
+      },
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520593604
+      }
+    ],
+    "12.2 認証成功の moto モック統合テストを書く": [
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520599092
+      },
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520938552
+      }
+    ],
+    "12.3 認証失敗・リトライ設定のユニットテストを書く": [
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520599962
+      },
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520939241
+      }
+    ],
+    "12. 認証解決（I/O 層）": [
+      {
+        "executionId": "797f95dc-1784-4889-b253-116d5de932da",
+        "chatSessionId": "sess_5f6950aa-9688-454b-aa76-befccb09e87c",
+        "timestamp": 1790520939315
+      }
     ]
   }
 }
