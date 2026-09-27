@@ -246,6 +246,37 @@
         "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
         "timestamp": 1790519064617
       }
+    ],
+    "9.1 `determine_exit_code` を実装する（`cli.py`）": [
+      {
+        "executionId": "02cab5bd-1717-40a0-b6a1-a23168718f6d",
+        "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
+        "timestamp": 1790519668464
+      },
+      {
+        "executionId": "02cab5bd-1717-40a0-b6a1-a23168718f6d",
+        "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
+        "timestamp": 1790519731658
+      }
+    ],
+    "9.2 終了コード決定のプロパティテストを書く": [
+      {
+        "executionId": "02cab5bd-1717-40a0-b6a1-a23168718f6d",
+        "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
+        "timestamp": 1790519737218
+      },
+      {
+        "executionId": "02cab5bd-1717-40a0-b6a1-a23168718f6d",
+        "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
+        "timestamp": 1790519842930
+      }
+    ],
+    "9. 終了コード決定（純粋ロジック層）": [
+      {
+        "executionId": "02cab5bd-1717-40a0-b6a1-a23168718f6d",
+        "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
+        "timestamp": 1790519843015
+      }
     ]
   }
 }

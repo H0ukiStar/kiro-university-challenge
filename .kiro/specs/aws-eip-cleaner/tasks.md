@@ -115,12 +115,12 @@
 - [x] 8. チェックポイント - 純粋ロジック層のテストを通す
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. 終了コード決定（純粋ロジック層）
-  - [ ] 9.1 `determine_exit_code` を実装する（`cli.py`）
+- [x] 9. 終了コード決定（純粋ロジック層）
+  - [x] 9.1 `determine_exit_code` を実装する（`cli.py`）
     - `ReleaseSummary` と調査失敗の有無から終了コードを決定する。調査失敗なし前提で `failed > 0` のとき非ゼロ、`failed == 0` のとき 0。調査失敗ありなら非ゼロ
     - _Requirements: 8.8, 9.4, 10.6_
 
-  - [ ]* 9.2 終了コード決定のプロパティテストを書く
+  - [x] 9.2 終了コード決定のプロパティテストを書く
     - **Property 9: 解放集計は非負かつ合計整合で、失敗があるときのみ非ゼロ終了する**
     - `# Feature: aws-eip-cleaner, Property 9` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 成功/失敗をランダムに返す解放関数から得た集計で、`succeeded`/`failed` が非負・和が件数一致、`determine_exit_code` が `failed>0` のときのみ非ゼロを検証する
