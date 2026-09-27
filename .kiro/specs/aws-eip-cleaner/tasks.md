@@ -79,13 +79,13 @@
     - `compute_max_workers` が `min(16, n)` を返すことを境界 n=1, 15, 16, 17 で検証する
     - _Requirements: 4.1_
 
-- [ ] 6. 一覧整形（純粋ロジック層）
-  - [ ] 6.1 `format_eip_list` / `print_eip_list` を実装する（`display.py`）
+- [x] 6. 一覧整形（純粋ロジック層）
+  - [x] 6.1 `format_eip_list` / `print_eip_list` を実装する（`display.py`）
     - `format_eip_list`: 各 EIP を Allocation_ID・パブリック IP・リージョン・関連付け状態を含む 1 行に整形し、合計件数の行を含める。打ち切りは行わない。`association_id is None` は「関連付けなし」文言に整形する
     - `print_eip_list`: 整形結果を標準出力へ書き出す
     - _Requirements: 6.1, 6.2, 6.4, 6.5, 7.1, 7.4_
 
-  - [ ]* 6.2 一覧整形のプロパティテストを書く
+  - [x] 6.2 一覧整形のプロパティテストを書く
     - **Property 5: 一覧整形は全対象を 1 行ずつ全項目付きで表示し件数を含め打ち切らない**
     - `# Feature: aws-eip-cleaner, Property 5` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 明細行数が入力件数と一致、各行に全 4 項目が含まれること、合計件数表示が含まれることを検証する

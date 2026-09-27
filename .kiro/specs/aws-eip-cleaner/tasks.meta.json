@@ -160,6 +160,37 @@
         "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
         "timestamp": 1790517496547
       }
+    ],
+    "6.1 `format_eip_list` / `print_eip_list` を実装する（`display.py`）": [
+      {
+        "executionId": "a1447ef6-8f1a-4f01-a451-02cc9712a76a",
+        "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
+        "timestamp": 1790518484328
+      },
+      {
+        "executionId": "a1447ef6-8f1a-4f01-a451-02cc9712a76a",
+        "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
+        "timestamp": 1790518581476
+      }
+    ],
+    "6.2 一覧整形のプロパティテストを書く": [
+      {
+        "executionId": "a1447ef6-8f1a-4f01-a451-02cc9712a76a",
+        "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
+        "timestamp": 1790518590872
+      },
+      {
+        "executionId": "a1447ef6-8f1a-4f01-a451-02cc9712a76a",
+        "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
+        "timestamp": 1790518697198
+      }
+    ],
+    "6. 一覧整形（純粋ロジック層）": [
+      {
+        "executionId": "a1447ef6-8f1a-4f01-a451-02cc9712a76a",
+        "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
+        "timestamp": 1790518697322
+      }
     ]
   }
 }
