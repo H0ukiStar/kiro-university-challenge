@@ -162,7 +162,7 @@
     - 擬似 `input_fn` で EOF 中断（残りが解放されない: 8.6）、解放失敗時の継続（8.7）を検証する
     - _Requirements: 8.6, 8.7_
 
-- [ ] 11. チェックポイント - オーケストレーションのテストを通す
+- [x] 11. チェックポイント - オーケストレーションのテストを通す
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 12. 認証解決（I/O 層）

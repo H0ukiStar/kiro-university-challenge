@@ -348,6 +348,18 @@
         "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
         "timestamp": 1790520214292
       }
+    ],
+    "11. チェックポイント - オーケストレーションのテストを通す": [
+      {
+        "executionId": "1ab1f29a-4c53-481d-bc20-0716d1a3d4d5",
+        "chatSessionId": "sess_24164dc3-9303-461a-82b2-51b80d9e75ee",
+        "timestamp": 1790520346890
+      },
+      {
+        "executionId": "1ab1f29a-4c53-481d-bc20-0716d1a3d4d5",
+        "chatSessionId": "sess_24164dc3-9303-461a-82b2-51b80d9e75ee",
+        "timestamp": 1790520377074
+      }
     ]
   }
 }
