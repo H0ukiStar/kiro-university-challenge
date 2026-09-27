@@ -215,22 +215,22 @@
     - 擬似 `scan_fn` で全 future 完了後に集約されること（4.2）、1 リージョン失敗が他へ波及せず継続すること（4.4, 4.5）を検証する
     - _Requirements: 4.2, 4.4, 4.5_
 
-- [ ] 16. CLI 引数解析・オプション検証・全体オーケストレーション
-  - [ ] 16.1 `build_parser` / `parse_args` / `validate_options` を実装する（`cli.py`）
+- [x] 16. CLI 引数解析・オプション検証・全体オーケストレーション
+  - [x] 16.1 `build_parser` / `parse_args` / `validate_options` を実装する（`cli.py`）
     - `--region`（append, 既定 `[]`）, `--profile`（既定 None）, `--dry-run`（store_true）, `--yes`（store_true）を定義する
     - `validate_options`: `--yes`/`--dry-run` 併用で `OptionConflictError`、`--region` 指定回数（重複排除前）が 50 超で `TooManyRegionsError`
     - _Requirements: 1.1, 1.5, 2.3, 9.5_
 
-  - [ ]* 16.2 引数解析・検証のユニットテストを書く
+  - [x] 16.2 引数解析・検証のユニットテストを書く
     - Namespace/既定値（1.1, 1.5）、未知オプション・不正値で `SystemExit(2)` と stderr（1.2, 1.4）、`--help` で `SystemExit(0)` と stdout（1.3）、併用で `OptionConflictError`・非ゼロ終了・解放未実行（9.5）、`--region` 境界 50 受理/51 で `TooManyRegionsError`・非ゼロ終了（2.3）を検証する
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 2.3, 9.5_
 
-  - [ ] 16.3 `main` を実装して全体を結線する（`cli.py` / `__main__.py`）
+  - [x] 16.3 `main` を実装して全体を結線する（`cli.py` / `__main__.py`）
     - 解析 → 検証 → 認証解決 → 対象リージョン決定 → 並列調査 → 集約 → 一覧表示 → 0 件分岐（6.3）→ モード分岐（dry-run/yes/対話）→ 集計 → `determine_exit_code` で終了コードを返す
     - `OptionConflictError`/`SystemExit(2)` 系はコード 2、その他の `AwsEipCleanerError` は非ゼロ（1）にマッピングする
     - _Requirements: 1.1, 6.1, 6.2, 6.3, 8.8, 9.4, 10.6_
 
-  - [ ]* 16.4 `main` の 0 件境界・終了コード統合テストを書く
+  - [x] 16.4 `main` の 0 件境界・終了コード統合テストを書く
     - 0 件検出時に各モードで対象なしメッセージと終了コード 0（6.3, 7.3, 9.6）、解放失敗/調査失敗時の非ゼロ終了を擬似依存注入で検証する
     - _Requirements: 6.3, 7.3, 9.6_
 

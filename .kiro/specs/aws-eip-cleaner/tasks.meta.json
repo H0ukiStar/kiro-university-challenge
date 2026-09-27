@@ -496,6 +496,61 @@
         "chatSessionId": "sess_531c4d73-8064-439d-9ba0-8454aa35f269",
         "timestamp": 1790523243968
       }
+    ],
+    "16.1 `build_parser` / `parse_args` / `validate_options` を実装する（`cli.py`）": [
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523356537
+      },
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523434085
+      }
+    ],
+    "16.2 引数解析・検証のユニットテストを書く": [
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523439299
+      },
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523823730
+      }
+    ],
+    "16.3 `main` を実装して全体を結線する（`cli.py` / `__main__.py`）": [
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523440272
+      },
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523677271
+      }
+    ],
+    "16.4 `main` の 0 件境界・終了コード統合テストを書く": [
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523682563
+      },
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523824570
+      }
+    ],
+    "16. CLI 引数解析・オプション検証・全体オーケストレーション": [
+      {
+        "executionId": "c0aacfb8-c6ae-466b-b3e5-65f4cb5411d9",
+        "chatSessionId": "sess_3f394298-773d-4e67-9cec-68efa2cdbb1b",
+        "timestamp": 1790523824650
+      }
     ]
   }
 }
