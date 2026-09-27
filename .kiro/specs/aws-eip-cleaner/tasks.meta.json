@@ -470,6 +470,32 @@
         "chatSessionId": "sess_4dedc5f2-ec84-48dc-961a-d0e730b3c59b",
         "timestamp": 1790522995372
       }
+    ],
+    "15.1 `scan_regions` を実装する（`parallel.py`）": [
+      {
+        "executionId": "f05fa241-84a0-4e4e-9c08-8113854c787c",
+        "chatSessionId": "sess_531c4d73-8064-439d-9ba0-8454aa35f269",
+        "timestamp": 1790523094842
+      },
+      {
+        "executionId": "f05fa241-84a0-4e4e-9c08-8113854c787c",
+        "chatSessionId": "sess_531c4d73-8064-439d-9ba0-8454aa35f269",
+        "timestamp": 1790523243047
+      }
+    ],
+    "15.2 `scan_regions` のユニットテストを書く": [
+      {
+        "executionId": "f05fa241-84a0-4e4e-9c08-8113854c787c",
+        "chatSessionId": "sess_531c4d73-8064-439d-9ba0-8454aa35f269",
+        "timestamp": 1790523243893
+      }
+    ],
+    "15. 並列調査の結線（I/O + 並列）": [
+      {
+        "executionId": "f05fa241-84a0-4e4e-9c08-8113854c787c",
+        "chatSessionId": "sess_531c4d73-8064-439d-9ba0-8454aa35f269",
+        "timestamp": 1790523243968
+      }
     ]
   }
 }

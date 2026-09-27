@@ -2,9 +2,13 @@
 
 本モジュールの ``compute_max_workers`` と ``aggregate`` は AWS API に依存しない純粋
 ロジック層の関数である。``compute_max_workers`` は並列度を決定し、``aggregate`` は
-各リージョンの調査結果を成功／失敗に分類して 1 つの集約結果に統合する。実際の並列調査
-（``ThreadPoolExecutor`` による ``scan_region`` の実行）は後続タスクで別途提供する。
+各リージョンの調査結果を成功／失敗に分類して 1 つの集約結果に統合する。``scan_regions``
+は ``ThreadPoolExecutor`` で各リージョンの調査関数を最大 16 並列で実行し、全完了後に
+``aggregate`` で集約する I/O 結線層の関数である。
 """
+
+from collections.abc import Callable
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from aws_eip_cleaner.models import AggregatedResult, RegionScanResult, UnusedEip
 
@@ -63,3 +67,34 @@ def aggregate(results: list[RegionScanResult]) -> AggregatedResult:
         succeeded_regions=succeeded_regions,
         failed_regions=failed_regions,
     )
+
+
+def scan_regions(
+    scan_fn: Callable[[str], RegionScanResult],
+    regions: list[str],
+) -> AggregatedResult:
+    """各リージョンを最大 16 並列で調査し、全完了後に集約する。
+
+    ``ThreadPoolExecutor`` で各リージョンの ``scan_fn`` を並行実行し、並列度は
+    ``compute_max_workers`` により最大 16 に制限する。``as_completed`` で全 future の
+    完了を待ってから ``aggregate`` を呼び、集約結果を返す。各 future 内の例外は
+    ``scan_fn``（= ``scan_region``）が失敗結果 ``RegionScanResult(error=...)`` として
+    返す設計のため、1 リージョンの失敗は他リージョンへ波及しない。
+
+    Parameters
+    ----------
+    scan_fn : Callable[[str], RegionScanResult]
+        単一リージョンを調査し調査結果を返す関数。
+    regions : list[str]
+        調査対象リージョン。1 件以上を前提とする。
+
+    Returns
+    -------
+    AggregatedResult
+        全リージョンの調査結果を成功／失敗に分類して統合した集約結果。
+    """
+    max_workers = compute_max_workers(len(regions))
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(scan_fn, region) for region in regions]
+        results = [future.result() for future in as_completed(futures)]
+    return aggregate(results)

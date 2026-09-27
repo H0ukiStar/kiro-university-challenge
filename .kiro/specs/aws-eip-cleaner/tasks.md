@@ -206,12 +206,12 @@
     - moto で Allocation_ID 指定の解放（10.1）、リトライ不能エラーで 1 回失敗確定（10.5）、`caplog` で INFO/ERROR に Allocation_ID が含まれること（10.2, 10.3）を検証する
     - _Requirements: 10.1, 10.2, 10.3, 10.5_
 
-- [ ] 15. 並列調査の結線（I/O + 並列）
-  - [ ] 15.1 `scan_regions` を実装する（`parallel.py`）
+- [x] 15. 並列調査の結線（I/O + 並列）
+  - [x] 15.1 `scan_regions` を実装する（`parallel.py`）
     - `ThreadPoolExecutor(max_workers=compute_max_workers(...))` で各リージョンを最大 16 並列調査し、`as_completed` で全 future 完了後に `aggregate` を呼ぶ。各 future の例外は `scan_fn` が失敗結果として返すため他へ波及しない
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5_
 
-  - [ ]* 15.2 `scan_regions` のユニットテストを書く
+  - [x] 15.2 `scan_regions` のユニットテストを書く
     - 擬似 `scan_fn` で全 future 完了後に集約されること（4.2）、1 リージョン失敗が他へ波及せず継続すること（4.4, 4.5）を検証する
     - _Requirements: 4.2, 4.4, 4.5_
 
