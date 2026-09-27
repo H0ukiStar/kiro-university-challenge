@@ -127,38 +127,38 @@
     - _Requirements: 8.8, 9.4, 10.6_
     - _Properties: 9_
 
-- [ ] 10. 解放オーケストレーション（純粋ロジック層の分岐）
-  - [ ] 10.1 `run_dry_run` を実装する（`runner.py`）
+- [x] 10. 解放オーケストレーション（純粋ロジック層の分岐）
+  - [x] 10.1 `run_dry_run` を実装する（`runner.py`）
     - 一覧と総件数を表示し、解放・対話を一切行わない。終了コードを返す
     - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-  - [ ]* 10.2 dry-run のプロパティテストを書く
+  - [x] 10.2 dry-run のプロパティテストを書く
     - **Property 7: dry-run では解放も対話も一切発生しない**
     - `# Feature: aws-eip-cleaner, Property 7` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 任意の EIP リストで解放関数呼び出し回数が 0、対話が発生しないことを検証する
     - _Requirements: 7.1, 7.2_
     - _Properties: 7_
 
-  - [ ] 10.3 `run_auto_approve` を実装する（`runner.py`）
+  - [x] 10.3 `run_auto_approve` を実装する（`runner.py`）
     - 総数を表示し全件を解放、成功/失敗を集計する。部分失敗（`EipReleaseError`）を捕捉し ERROR ログ後に失敗計上して継続する
     - _Requirements: 9.1, 9.2, 9.3, 9.4, 9.6, 10.3_
 
-  - [ ]* 10.4 yes モードのプロパティテストを書く
+  - [x] 10.4 yes モードのプロパティテストを書く
     - **Property 8: yes モードは全対象に対し解放を 1 回ずつ試行する**
     - `# Feature: aws-eip-cleaner, Property 8` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 任意の EIP リストで各 EIP に解放が 1 回ずつ試行され、対話が発生しないことを検証する
     - _Requirements: 9.1_
     - _Properties: 8_
 
-  - [ ]* 10.5 yes モードの件数表示・0 件ユニットテストを書く
+  - [x] 10.5 yes モードの件数表示・0 件ユニットテストを書く
     - 総数表示・成功/失敗件数表示（9.2, 9.3）、0 件時のメッセージと終了コード 0（9.6）を検証する
     - _Requirements: 9.2, 9.3, 9.6_
 
-  - [ ] 10.6 `run_interactive` を実装する（`runner.py`）
+  - [x] 10.6 `run_interactive` を実装する（`runner.py`）
     - 1 件ずつ確認し承認分のみ解放、成功/失敗を集計する。`EOFError` で残りを中断する。解放失敗は捕捉・ERROR ログ・失敗計上して次へ進む
     - _Requirements: 8.6, 8.7_
 
-  - [ ]* 10.7 対話モードのユニットテストを書く
+  - [x] 10.7 対話モードのユニットテストを書く
     - 擬似 `input_fn` で EOF 中断（残りが解放されない: 8.6）、解放失敗時の継続（8.7）を検証する
     - _Requirements: 8.6, 8.7_
 

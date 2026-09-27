@@ -277,6 +277,77 @@
         "chatSessionId": "sess_2d7f4d1a-f880-431d-823c-3bdb5c5e5644",
         "timestamp": 1790519843015
       }
+    ],
+    "10.1 `run_dry_run` を実装する（`runner.py`）": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790519953752
+      },
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520206819
+      }
+    ],
+    "10.3 `run_auto_approve` を実装する（`runner.py`）": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790519955194
+      },
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520209124
+      }
+    ],
+    "10.6 `run_interactive` を実装する（`runner.py`）": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790519956097
+      },
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520213380
+      }
+    ],
+    "10.2 dry-run のプロパティテストを書く": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520207753
+      }
+    ],
+    "10.4 yes モードのプロパティテストを書く": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520210606
+      }
+    ],
+    "10.5 yes モードの件数表示・0 件ユニットテストを書く": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520211996
+      }
+    ],
+    "10.7 対話モードのユニットテストを書く": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520214202
+      }
+    ],
+    "10. 解放オーケストレーション（純粋ロジック層の分岐）": [
+      {
+        "executionId": "b5f9d3f5-7e88-4b16-91f2-7b5b612cd284",
+        "chatSessionId": "sess_90d91bd6-7623-4e94-a7bb-b8302ec22e34",
+        "timestamp": 1790520214292
+      }
     ]
   }
 }
