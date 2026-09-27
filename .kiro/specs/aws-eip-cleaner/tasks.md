@@ -49,13 +49,13 @@
     - _Requirements: 2.4_
     - _Properties: 2_
 
-- [ ] 4. 未利用 EIP 抽出（純粋ロジック層）
-  - [ ] 4.1 `extract_unused_eips` を実装する（`scanner.py`）
+- [x] 4. 未利用 EIP 抽出（純粋ロジック層）
+  - [x] 4.1 `extract_unused_eips` を実装する（`scanner.py`）
     - `describe_addresses` 相当のアドレス集合から `AssociationId` 未設定または空のものを `UnusedEip`（`association_id=None`）として抽出する
     - `allocation_id`・`public_ip` は元アドレス由来、`region` は引数由来とする
     - _Requirements: 5.2, 5.3, 5.4_
 
-  - [ ]* 4.2 未利用 EIP 抽出のプロパティテストを書く
+  - [x] 4.2 未利用 EIP 抽出のプロパティテストを書く
     - **Property 3: 未利用 EIP 抽出は Association_ID 非保持の EIP と厳密一致しフィールドを保持する**
     - `# Feature: aws-eip-cleaner, Property 3` タグと本文コメントを付す。`@settings(max_examples=100)`
     - `AssociationId` の有無・空文字を混在させたアドレス集合を生成し、抽出結果の厳密一致とフィールド保持、空入力時の空出力を検証する

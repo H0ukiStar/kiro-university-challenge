@@ -39,3 +39,5 @@ convention = "numpy"
 [tool.mypy]
 python_version = "3.14"
 strict = true
+# 引数なしの `uv run mypy` でソースとテストの双方を対象にする
+files = ["src", "tests"]

@@ -1,5 +1,10 @@
 {
-  "pbtResults": {},
+  "pbtResults": {
+    "4.2 未利用 EIP 抽出のプロパティテストを書く": {
+      "status": "passed",
+      "lastRunTimestamp": 1790517034890
+    }
+  },
   "executionHistory": {
     "1. プロジェクト初期化と土台整備": [
       {
@@ -85,6 +90,32 @@
         "executionId": "8f00d35b-3292-420c-9d53-6929ece4588f",
         "chatSessionId": "sess_eff79910-2cea-4639-b5a0-66ee09194f46",
         "timestamp": 1790503539165
+      }
+    ],
+    "4.1 `extract_unused_eips` を実装する（`scanner.py`）": [
+      {
+        "executionId": "5f18ac2a-1288-4b21-8e63-4303968c3e88",
+        "chatSessionId": "sess_9ef67892-51a5-4039-bbed-9569cd7449ed",
+        "timestamp": 1790516869105
+      },
+      {
+        "executionId": "5f18ac2a-1288-4b21-8e63-4303968c3e88",
+        "chatSessionId": "sess_9ef67892-51a5-4039-bbed-9569cd7449ed",
+        "timestamp": 1790517066296
+      }
+    ],
+    "4.2 未利用 EIP 抽出のプロパティテストを書く": [
+      {
+        "executionId": "5f18ac2a-1288-4b21-8e63-4303968c3e88",
+        "chatSessionId": "sess_9ef67892-51a5-4039-bbed-9569cd7449ed",
+        "timestamp": 1790517070361
+      }
+    ],
+    "4. 未利用 EIP 抽出（純粋ロジック層）": [
+      {
+        "executionId": "5f18ac2a-1288-4b21-8e63-4303968c3e88",
+        "chatSessionId": "sess_9ef67892-51a5-4039-bbed-9569cd7449ed",
+        "timestamp": 1790517070439
       }
     ]
   }
