@@ -191,6 +191,61 @@
         "chatSessionId": "sess_e75c96c4-bd71-4d74-b33f-f2c0f6a50cd6",
         "timestamp": 1790518697322
       }
+    ],
+    "7.1 `ConfirmDecision` / `interpret_input` を実装する（`confirm.py`）": [
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518795913
+      },
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518852442
+      }
+    ],
+    "7.3 `prompt_decision` を実装する（`confirm.py`）": [
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518858901
+      },
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518948242
+      }
+    ],
+    "7.2 入力解釈のプロパティテストを書く": [
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518865874
+      },
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790519063543
+      }
+    ],
+    "7.4 `prompt_decision` のユニットテストを書く": [
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790518952459
+      },
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790519064542
+      }
+    ],
+    "7. 確認入力の解釈（純粋ロジック層）": [
+      {
+        "executionId": "359b424d-913d-40d1-bb8d-2de1c64764f7",
+        "chatSessionId": "sess_5937beae-fc34-4836-805c-6febc4a8cec6",
+        "timestamp": 1790519064617
+      }
     ]
   }
 }

@@ -92,23 +92,23 @@
     - _Requirements: 6.1, 6.2, 6.4, 6.5, 7.1, 7.4_
     - _Properties: 5_
 
-- [ ] 7. 確認入力の解釈（純粋ロジック層）
-  - [ ] 7.1 `ConfirmDecision` / `interpret_input` を実装する（`confirm.py`）
+- [x] 7. 確認入力の解釈（純粋ロジック層）
+  - [x] 7.1 `ConfirmDecision` / `interpret_input` を実装する（`confirm.py`）
     - `interpret_input`: 正規化後（トリム・小文字化）が `"y"` で APPROVE、`"n"` で REJECT、それ以外を INVALID とする
     - _Requirements: 8.2, 8.3, 8.4_
 
-  - [ ]* 7.2 入力解釈のプロパティテストを書く
+  - [x] 7.2 入力解釈のプロパティテストを書く
     - **Property 6: 確認入力の解釈は y/n（大小無視）以外をすべて無効とする**
     - `# Feature: aws-eip-cleaner, Property 6` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 特殊文字・空文字・空白を含む任意 Unicode 文字列を生成し、分類を検証する
     - _Requirements: 8.2, 8.3, 8.4_
     - _Properties: 6_
 
-  - [ ] 7.3 `prompt_decision` を実装する（`confirm.py`）
+  - [x] 7.3 `prompt_decision` を実装する（`confirm.py`）
     - 1 件の EIP について承認/拒否を得る。無効入力は最大 3 回まで再入力を求め、3 回連続無効なら REJECT として扱う。`input_fn` を注入可能にし、`EOFError` は再送出する
     - _Requirements: 8.1, 8.5_
 
-  - [ ]* 7.4 `prompt_decision` のユニットテストを書く
+  - [x] 7.4 `prompt_decision` のユニットテストを書く
     - 無効入力 3 連続で REJECT になること（境界）、承認/拒否の即時解決、EOF での再送出を擬似 `input_fn` で検証する
     - _Requirements: 8.1, 8.5_
 
