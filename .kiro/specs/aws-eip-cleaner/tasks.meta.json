@@ -117,6 +117,49 @@
         "chatSessionId": "sess_9ef67892-51a5-4039-bbed-9569cd7449ed",
         "timestamp": 1790517070439
       }
+    ],
+    "5.1 `aggregate` / `compute_max_workers` を実装する（`parallel.py`）": [
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517224875
+      },
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517347708
+      }
+    ],
+    "5.2 集約のプロパティテストを書く": [
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517360251
+      },
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517495685
+      }
+    ],
+    "5.3 並列度決定のユニットテストを書く": [
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517361490
+      },
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517496463
+      }
+    ],
+    "5. 結果集約と並列度決定（純粋ロジック層）": [
+      {
+        "executionId": "50ea4e39-68ff-49bf-8c6d-910ff0634f66",
+        "chatSessionId": "sess_dd735821-ccbc-4b4a-abea-b7e1e42f7d43",
+        "timestamp": 1790517496547
+      }
     ]
   }
 }

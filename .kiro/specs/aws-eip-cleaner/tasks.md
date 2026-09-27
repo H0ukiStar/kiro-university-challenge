@@ -62,20 +62,20 @@
     - _Requirements: 5.2, 5.3, 5.4_
     - _Properties: 3_
 
-- [ ] 5. 結果集約と並列度決定（純粋ロジック層）
-  - [ ] 5.1 `aggregate` / `compute_max_workers` を実装する（`parallel.py`）
+- [x] 5. 結果集約と並列度決定（純粋ロジック層）
+  - [x] 5.1 `aggregate` / `compute_max_workers` を実装する（`parallel.py`）
     - `aggregate`: 成功/失敗リージョンを分類し、成功リージョンの EIP のみを統合した `AggregatedResult` を返す
     - `compute_max_workers`: `min(limit, region_count)` を返す（`region_count>=1` 前提）
     - _Requirements: 4.1, 4.3, 4.4, 4.5_
 
-  - [ ]* 5.2 集約のプロパティテストを書く
+  - [x] 5.2 集約のプロパティテストを書く
     - **Property 4: 集約は全リージョンを漏れなく分類し成功結果の EIP を保持する**
     - `# Feature: aws-eip-cleaner, Property 4` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 成功・失敗混在の調査結果リストを生成し、成功/失敗集合の直和が全入力に一致すること、失敗集合が `error` 保持と一致すること、統合 EIP が成功分のみであることを検証する
     - _Requirements: 4.3, 4.4, 4.5_
     - _Properties: 4_
 
-  - [ ]* 5.3 並列度決定のユニットテストを書く
+  - [x] 5.3 並列度決定のユニットテストを書く
     - `compute_max_workers` が `min(16, n)` を返すことを境界 n=1, 15, 16, 17 で検証する
     - _Requirements: 4.1_
 
