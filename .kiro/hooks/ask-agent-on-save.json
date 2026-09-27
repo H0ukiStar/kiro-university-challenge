@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Ask Agent on Save",
+      "trigger": "PostFileSave",
+      "action": {
+        "type": "agent",
+        "prompt": "ruffやmypyでチェックや自動フォーマットを行って"
+      },
+      "matcher": "\\.py$",
+      "enabled": true
+    }
+  ]
+}
