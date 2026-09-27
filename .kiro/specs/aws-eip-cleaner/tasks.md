@@ -112,7 +112,7 @@
     - 無効入力 3 連続で REJECT になること（境界）、承認/拒否の即時解決、EOF での再送出を擬似 `input_fn` で検証する
     - _Requirements: 8.1, 8.5_
 
-- [ ] 8. チェックポイント - 純粋ロジック層のテストを通す
+- [x] 8. チェックポイント - 純粋ロジック層のテストを通す
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 9. 終了コード決定（純粋ロジック層）
