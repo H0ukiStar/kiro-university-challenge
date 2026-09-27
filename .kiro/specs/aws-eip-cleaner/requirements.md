@@ -8,7 +8,7 @@ aws-eip-cleaner は、AWS アカウント上の未利用 Elastic IP（EIP）を�
 
 - **CLI_Tool**: 本ツール本体。argparse でオプションを解析し、EIP の調査・削除を統括する CLI アプリケーション。
 - **EIP**: Elastic IP アドレス。AWS が提供する静的パブリック IPv4 アドレス。EC2 の `describe-addresses` で列挙され、`release-address` で解放される。
-- **Unused_EIP**: いずれのリソース（EC2 インスタンスや ENI）にも関連付けられていない EIP。`Association ID` を持たない割り当て済みアドレスを指す。
+- **Unused_EIP**: いずれのリソース（EC2 インスタンスや ENI）にも関連付けられていない EIP。`Association ID` を持たない（`Association ID` が未設定または空文字である）割り当て済みアドレスを指す。
 - **Allocation_ID**: EIP の割り当てを一意に識別する ID（例: `eipalloc-xxxx`）。VPC スコープの EIP の解放に使用する。
 - **Association_ID**: EIP がリソースに関連付けられていることを示す ID（例: `eipassoc-xxxx`）。この ID を持たない EIP を未利用とみなす。
 - **Region**: AWS のリージョン（例: `us-east-1`）。調査・削除の対象単位。有効な Region 名の一覧は boto3（botocore）が保持する EC2 サービスの既知リージョン一覧（`Session.get_available_regions("ec2")`）を基準とする。
@@ -40,7 +40,7 @@ aws-eip-cleaner は、AWS アカウント上の未利用 Elastic IP（EIP）を�
 
 1. WHEN CLI_Tool が起動され `--region` オプションが 1 つ以上指定された場合, THE CLI_Tool SHALL 指定された Region（重複指定は 1 件に統合する）のみを調査対象とする
 2. IF CLI_Tool の起動時に `--region` オプションが 1 つも指定されなかった場合, THEN THE CLI_Tool SHALL 呼び出しに使用した認証情報でアクセス可能な全 Region を調査対象とする
-3. THE CLI_Tool SHALL `--region` オプションの複数回指定を 1 回以上 50 回以下の範囲で受け付け、同一の Region 名が複数回指定された場合は 1 件として扱う
+3. THE CLI_Tool SHALL `--region` オプションの複数回指定を 1 回以上 50 回以下の範囲で受け付け、同一の Region 名が複数回指定された場合は 1 件として扱う。IF `--region` の指定回数（重複排除前）が 50 回を超えた場合, THEN THE CLI_Tool SHALL 指定回数が上限を超えた旨のエラーメッセージを標準エラー出力に表示し、いずれの Region に対しても調査を実行せずに非ゼロの終了コードで終了する
 4. IF `--region` に boto3（botocore）の EC2 既知リージョン一覧（`Session.get_available_regions("ec2")`）に含まれない値が 1 つ以上指定された場合, THEN THE CLI_Tool SHALL 該当する Region 名が無効である旨のエラーメッセージを標準エラー出力に表示し、いずれの Region に対しても調査を実行せずに非ゼロの終了コードで終了する
 5. IF `--region` オプションが 1 つも指定されず、かつアクセス可能な全 Region の取得に失敗した場合, THEN THE CLI_Tool SHALL Region 一覧の取得に失敗した旨のエラーメッセージを標準エラー出力に表示し、調査を実行せずに非ゼロの終了コードで終了する
 
@@ -77,7 +77,7 @@ aws-eip-cleaner は、AWS アカウント上の未利用 Elastic IP（EIP）を�
 1. WHEN あるリージョンの調査が実行された場合, THE Region_Scanner SHALL 当該リージョンの割り当て済み EIP をすべて列挙する
 2. IF 当該リージョンに割り当て済み EIP が 1 件も存在しない場合, THEN THE Region_Scanner SHALL 空の Unused_EIP 一覧を返し、当該リージョンをエラーなしで処理完了として扱う
 3. THE Region_Scanner SHALL 列挙した割り当て済み EIP のうち、Association_ID を持たない（Association_ID が未設定または空である）各 EIP を Unused_EIP として抽出する
-4. THE Region_Scanner SHALL 抽出した各 Unused_EIP について、Allocation_ID、パブリック IP アドレス、リージョンの 3 項目を記録する
+4. THE Region_Scanner SHALL 抽出した各 Unused_EIP について、Allocation_ID、パブリック IP アドレス、リージョン、関連付け状態（Unused_EIP は関連付けなし）の 4 項目を記録する
 5. IF EIP の列挙処理が AWS API 呼び出しの失敗により完了できない場合, THEN THE Region_Scanner SHALL 当該リージョンの列挙を失敗として扱い、失敗したリージョンと失敗理由を示すエラー情報を呼び出し元に通知し、部分的に取得した EIP を Unused_EIP として記録しない
 
 ### Requirement 6: 削除対象一覧の表示
@@ -86,7 +86,7 @@ aws-eip-cleaner は、AWS アカウント上の未利用 Elastic IP（EIP）を�
 
 #### Acceptance Criteria
 
-1. WHEN すべての調査が完了した場合, THE CLI_Tool SHALL 検出した各 Unused_EIP を Allocation_ID、パブリック IP アドレス、リージョンの各項目を含む形で 1 件 1 行の一覧として標準出力に表示する
+1. WHEN すべての調査が完了した場合, THE CLI_Tool SHALL 検出した各 Unused_EIP を Allocation_ID、パブリック IP アドレス、リージョン、関連付け状態の各項目を含む形で 1 件 1 行の一覧として標準出力に表示する
 2. WHEN 検出した Unused_EIP を一覧表示する場合, THE CLI_Tool SHALL 一覧の先頭または末尾に検出件数の合計を表示する
 3. IF Unused_EIP が 1 件も検出されなかった場合, THEN THE CLI_Tool SHALL 削除対象が 0 件である旨を示すメッセージを標準出力に表示し、終了コード 0 で終了する
 4. WHEN 一覧を表示する場合, THE CLI_Tool SHALL 検出件数を 0 件から 100000 件までの範囲で全件を表示する
@@ -98,7 +98,7 @@ aws-eip-cleaner は、AWS アカウント上の未利用 Elastic IP（EIP）を�
 
 #### Acceptance Criteria
 
-1. WHERE `--dry-run` オプションが指定された場合, THE CLI_Tool SHALL 削除対象となる各 EIP について割り当て ID・パブリック IP アドレス・関連付け状態を含む一覧を標準出力に表示し、いかなる EIP の解放も行わない
+1. WHERE `--dry-run` オプションが指定された場合, THE CLI_Tool SHALL 削除対象となる各 EIP について割り当て ID・パブリック IP アドレス・リージョン・関連付け状態を含む一覧を標準出力に表示し、いかなる EIP の解放も行わない
 2. WHERE `--dry-run` オプションが指定された場合, THE CLI_Tool SHALL 対話確認を行わずに処理を完了する
 3. WHERE `--dry-run` オプションが指定され、かつ削除対象の EIP が 0 件の場合, THE CLI_Tool SHALL 対象が存在しない旨のメッセージを標準出力に表示し、EIP の解放を行わずに正常終了する
 4. WHERE `--dry-run` オプションが指定された場合, THE CLI_Tool SHALL 表示した削除対象の総件数を標準出力に表示する
