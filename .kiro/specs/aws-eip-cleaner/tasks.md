@@ -29,20 +29,20 @@
     - `ReleaseSummary`（`succeeded`, `failed`, `total` プロパティ）を定義する
     - _Requirements: 5.4, 4.3, 10.6_
 
-- [ ] 3. リージョン正規化・検証（純粋ロジック層）
-  - [ ] 3.1 `normalize_regions` / `validate_regions` を実装する（`regions.py`）
+- [x] 3. リージョン正規化・検証（純粋ロジック層）
+  - [x] 3.1 `normalize_regions` / `validate_regions` を実装する（`regions.py`）
     - `normalize_regions`: 重複排除しつつ順序を安定させて返す
     - `validate_regions`: 全要素が `available` に含まれることを検証し、含まれない値があれば `InvalidRegionError` を送出する
     - _Requirements: 2.1, 2.3, 2.4_
 
-  - [ ]* 3.2 リージョン正規化のプロパティテストを書く
+  - [x] 3.2 リージョン正規化のプロパティテストを書く
     - **Property 1: リージョン正規化は一意集合と等価かつ冪等**
     - `# Feature: aws-eip-cleaner, Property 1` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 重複・順序ばらつきを含むリージョンリストを生成し、一意集合との等価性と冪等性を検証する
     - _Requirements: 2.1, 2.3_
     - _Properties: 1_
 
-  - [ ]* 3.3 リージョン検証のプロパティテストを書く
+  - [x] 3.3 リージョン検証のプロパティテストを書く
     - **Property 2: リージョン検証は無効値を 1 つでも含めば拒否する**
     - `# Feature: aws-eip-cleaner, Property 2` タグと本文コメントを付す。`@settings(max_examples=100)`
     - 全要素が利用可能集合に含まれる場合のみ成功、1 つでも含まれなければ `InvalidRegionError` を検証する
