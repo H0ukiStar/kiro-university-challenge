@@ -179,13 +179,13 @@
     - プロファイル不在で `ProfileNotFoundError`、認証失敗で `CredentialResolutionError`（3.3, 3.4）、生成 Config の `retries` が `{"max_attempts": 3, "mode": "standard"}`（10.4）を検証する
     - _Requirements: 3.3, 3.4, 10.4_
 
-- [ ] 13. リージョン列挙（I/O 層）
-  - [ ] 13.1 `list_available_regions` / `resolve_target_regions` を実装する（`regions.py`）
+- [x] 13. リージョン列挙（I/O 層）
+  - [x] 13.1 `list_available_regions` / `resolve_target_regions` を実装する（`regions.py`）
     - `list_available_regions`: `Session.get_available_regions("ec2")` 相当でアクセス可能リージョンを取得、失敗時 `RegionListingError`
     - `resolve_target_regions`: 指定があれば正規化+検証、無指定なら全リージョンを返す
     - _Requirements: 2.2, 2.5_
 
-  - [ ]* 13.2 リージョン列挙の moto モック・例外ユニットテストを書く
+  - [x] 13.2 リージョン列挙の moto モック・例外ユニットテストを書く
     - 全リージョン取得（2.2）と取得失敗時の `RegionListingError`・非ゼロ終了（2.5）を検証する
     - _Requirements: 2.2, 2.5_
 
