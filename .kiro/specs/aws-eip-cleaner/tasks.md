@@ -8,7 +8,7 @@
 
 ## Tasks
 
-- [ ] 1. プロジェクト初期化と土台整備
+- [x] 1. プロジェクト初期化と土台整備
   - `aws-eip-cleaner/` ディレクトリを作成し、uv で src レイアウトのプロジェクトを初期化する（`aws-eip-cleaner/pyproject.toml`, `README.md`, `uv.lock`, `src/aws_eip_cleaner/__init__.py`, `tests/__init__.py`）
   - 依存を追加する: `uv add boto3` / `uv add "boto3-stubs[ec2]"`
   - 開発依存を追加する: `uv add --dev pytest hypothesis moto mypy ruff`

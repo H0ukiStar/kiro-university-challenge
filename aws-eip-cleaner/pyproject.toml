@@ -1,0 +1,41 @@
+[project]
+name = "aws-eip-cleaner"
+version = "0.1.0"
+description = "AWS アカウント上の未利用 Elastic IP を検出して解放する CLI ツール"
+readme = "README.md"
+authors = [
+    { name = "H0ukiStar", email = "H0uk1St4r@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "boto3>=1.43.103",
+    "boto3-stubs[ec2]>=1.43.103",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.168.2",
+    "moto>=5.2.3",
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
+
+[tool.ruff]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "D"]
+# 日本語 docstring は句点「。」で終わるため、英語ピリオドを要求する D400/D415 は無効化する
+ignore = ["D400", "D415"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
