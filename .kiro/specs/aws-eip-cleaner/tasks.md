@@ -240,8 +240,8 @@
   - `uv run pytest` で全テスト（プロパティ・ユニット・moto 統合）が通ることを確認する
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 18. ドキュメント作成
-  - [ ] 18.1 開発者向けドキュメントを作成する（`aws-eip-cleaner/docs/developer.md`）
+- [x] 18. ドキュメント作成
+  - [x] 18.1 開発者向けドキュメントを作成する（`aws-eip-cleaner/docs/developer.md`）
     - 開発環境セットアップ（uv、`uv sync` / `uv add` による依存インストール）を記載する
     - プロジェクト構成（src レイアウト、`src/aws_eip_cleaner/` 配下の各モジュールの責務: `cli` / `runner` / `parallel` / `scanner` / `release` / `regions` / `credentials` / `confirm` / `display` / `models` / `errors`）を記載する
     - テスト実行方法（`uv run pytest`、Hypothesis のプロパティテスト、moto によるモック）を記載する
@@ -250,14 +250,14 @@
     - コントリビュート手順を記載する
     - _Requirements: 1.1, 2.2, 3.1, 4.1, 5.1, 10.1_
 
-  - [ ] 18.2 利用者向けドキュメントを作成する（`aws-eip-cleaner/docs/usage.md`）
+  - [x] 18.2 利用者向けドキュメントを作成する（`aws-eip-cleaner/docs/usage.md`）
     - インストール方法と前提（AWS 認証情報）を記載する
     - CLI オプション一覧（`--region` / `--profile` / `--dry-run` / `--yes`）と各説明を記載する
     - 代表的な使用例（全リージョン dry-run、特定リージョン指定、プロファイル指定、`--yes` による一括削除）を記載する
     - 未利用 EIP の定義、終了コードの意味、注意事項（解放は取り消せない等）を記載する
     - _Requirements: 1.3, 2.1, 2.2, 3.1, 5.2, 6.1, 7.1, 8.1, 9.1, 10.1, 10.6_
 
-  - [ ] 18.3 リポジトリ直下の README を整備する（`aws-eip-cleaner/README.md`）
+  - [x] 18.3 リポジトリ直下の README を整備する（`aws-eip-cleaner/README.md`）
     - ツールの概要説明を記載する
     - クイックスタート（インストールと最小実行例）を記載する
     - 主要オプションの要約を記載する

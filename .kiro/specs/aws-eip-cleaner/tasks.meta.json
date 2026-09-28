@@ -563,6 +563,49 @@
         "chatSessionId": "sess_20d30ac3-c6dd-438e-b43b-3cf900cc4469",
         "timestamp": 1790524085026
       }
+    ],
+    "18.1 開発者向けドキュメントを作成する（`aws-eip-cleaner/docs/developer.md`）": [
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601317646
+      },
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601480088
+      }
+    ],
+    "18.2 利用者向けドキュメントを作成する（`aws-eip-cleaner/docs/usage.md`）": [
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601323522
+      },
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601481477
+      }
+    ],
+    "18.3 リポジトリ直下の README を整備する（`aws-eip-cleaner/README.md`）": [
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601324874
+      },
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601482820
+      }
+    ],
+    "18. ドキュメント作成": [
+      {
+        "executionId": "a0109cb8-7982-4ebf-8a5a-a357061d9c5c",
+        "chatSessionId": "sess_c1f1caec-debf-4358-ae62-8d7a9d0275c6",
+        "timestamp": 1790601482893
+      }
     ]
   }
 }
